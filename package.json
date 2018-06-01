@@ -1,0 +1,22 @@
+{
+  "name": "ng-testing-library",
+  "version": "1.0.0",
+  "description": "Simple dom utilities for Angular",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular-testing-library",
+    "testing",
+    "angular"
+  ],
+  "author": "Hector Rocha",
+  "license": "ISC",
+  "devDependencies": {
+    "@angular/core": "^5.2.0"
+  },
+  "dependencies": {
+    "dom-testing-library": "^2.3.2"
+  }
+}
