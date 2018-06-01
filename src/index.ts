@@ -24,7 +24,10 @@ function renderIntoDocument<T>(
   return render(ui);
 }
 
-async function configureModule(ui, moduleMetadata) {
+async function configureModule<T>(
+  ui: Type<T>,
+  moduleMetadata: TestModuleMetadata
+) {
   await TestBed.configureTestingModule(moduleMetadata).compileComponents();
 }
 
@@ -38,12 +41,12 @@ function render<T>(ui: Type<T>): ComponentTesting<T> {
   };
 }
 
-interface ComponentTesting<T> extends GetsAndQueries {
+export interface ComponentTesting<T> extends GetsAndQueries {
   fixture: ComponentFixture<T>;
   component: T;
 }
 
-interface GetsAndQueries {
+export interface GetsAndQueries {
   queryByTitle: BoundFunction<QueryByAttribute>;
   getAllByTitle: BoundFunction<AllByAttribute>;
   queryAllByTitle: BoundFunction<AllByText>;
