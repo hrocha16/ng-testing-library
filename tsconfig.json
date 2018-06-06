@@ -6,5 +6,6 @@
     "outDir": "./dist",
     "strict": true,
     "lib": ["es2015"]
-  }
+  },
+  "exclude": ["example", "node_modules", "other"]
 }

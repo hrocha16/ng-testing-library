@@ -16,7 +16,7 @@ import {
 } from '@angular/core/testing';
 import { Type } from '@angular/core';
 
-function renderIntoDocument<T>(
+function configureEnvironment<T>(
   ui: Type<T>,
   moduleMetadata: TestModuleMetadata
 ): ComponentTesting<T> {
@@ -74,4 +74,4 @@ export interface GetsAndQueries {
 }
 
 export * from 'dom-testing-library';
-export { renderIntoDocument };
+export { configureEnvironment };
